@@ -19,6 +19,16 @@ fn clear() {
     }
 }
 
+fn show_man(steps: [&str; 11], step: usize, displayed_word: &[char]) {
+    clear();
+    if steps.len() - step != 11 {
+        println!("{}", steps[steps.len() - step]);
+    }
+
+    let new_displayed_word: String = displayed_word.clone().into_iter().collect();
+    print!("{}\n", &new_displayed_word);
+}
+
 fn main() {
     let mut new_game = true;
     clear();
